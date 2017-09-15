@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="?attr/colorPrimaryDark"
+                android:padding="16dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+  <!-- 显示当前用户的图标和用户名-->
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/imgUsername"
+      android:layout_width="130dp"
+      android:layout_height="130dp"
+      android:layout_gravity="center"
+      android:layout_marginBottom="4dp"
+      android:layout_marginLeft="60dp"
+      android:layout_marginTop="8dp"
+      android:src="@drawable/me"/>
+
+  <TextView
+      android:id="@+id/tvUsername"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:text="请登录"
+      android:textSize="26sp"/>
+
+  <Button
+      android:id="@+id/btn_login"
+      style="?borderlessButtonStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_gravity="right"
+      android:text="登录"/>
+</RelativeLayout>

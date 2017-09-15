@@ -1,0 +1,91 @@
+
+Tmall App开发:
+1.云端开发 
+  jsp + servlet + jdbc + oracle
+  struts2 + spring + hibernate + oracle
+  springMVC + spring + MyBatis + oracle
+  
+  Web App:浏览器显示 jsp / html 
+  Android App:JSON / xml / text
+  
+ 1.1 在pl/sql developer 执行 tmall\WebServer\tmall\WebRoot\db\tmallScript.sql  
+ 
+ 1.2 检查 tmall\WebServer\tmall\src\com\tmall\dao\DBUtil.java
+     端口/实例/用户名/密码
+     若修改源码则重新部署
+     
+ 1.3 复制 tmall.war 到 apache-tomcat-8.0.33\webapps 下
+     启动 Tomcat
+ 
+ 1.4 若浏览器访问 tmall 出错,则
+  1.4.1 在 MyEclipse 文件夹上搜索 jstl,找到 jstl-1.2.jar
+  1.4.2 复制 jstl-1.2.jar 到 apache-tomcat-8.0.33\lib 下
+  
+ 1.5 重启 Tomcat 
+
+ 1.6 关闭防火墙,使用手机端浏览器访问 tmall 
+  
+  
+  
+2.Android 客户端开发(Android App):  
+2.1 New Module:Tmall
+2.2 导入所需的 jar 包
+2.3 授予所需权限
+2.4 复制所需图标
+    修改 AndroidManifest.xml:app icon:drawable/ic_launcher
+    修改 style.xml:Theme.AppCompat.Light.NoActionBar
+2.5 开屏页
+2.6 MainActivity 布局
+    layout
+      activity_main.xml
+      nav_header.xml
+      include_list_viewpager.xml
+    menu
+      drawer_view.xml
+2.7 导航视图  
+
+
+
+Tmal v2 -----------------------------------------
+LoginActivity
+RegisterActivity    
+head_nav 修改 用户图像 (相机/相册 + 上传)
+
+
+
+Tmal v3 -----------------------------------------
+Fragment
+RecyclerView load data
+
+
+
+Tmal v4 -----------------------------------------
+1.上拉/下拉 加载更多数据
+  1.1 在云端数据库中新增更多数据
+  1.2 浏览器查看更多数据(分页)
+  1.3 Android端 上拉 / 下拉
+    1.3.1 修改 fragment 布局文件 
+    1.3.2 SwipeRefreshLayout 事件
+2.显示商品详细信息
+  2.1 修改样式 style.xml
+  2.2 ProductDetailActivity 布局文件
+  2.3 ProductDetailActivity
+  
+
+后续开发:
+1.上拉 Load More 显示动画
+2.订单    -- 参考云端购物车CartServlet,产生订单
+  宝贝 id    数量  单价
+  10010      1      100
+  10120      2      200
+  ---------------------
+             3      500
+3.MainActivity 中菜单 refresh 事件
+ 3.1 根据 某某 排序
+ 3.2 搜索 功能      
+4.使用轮询推送 折扣/新宝贝 
+
+
+
+
+  

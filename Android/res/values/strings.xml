@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">天猫</string>
+  <string name="about">天猫 V7.0.0\nCopyright 阿里巴巴</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
